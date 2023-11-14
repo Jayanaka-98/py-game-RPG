@@ -1,6 +1,7 @@
 # Python based RPG game development using pygame
 
-[Demo Video.webm](https://github.com/Jayanaka-98/python-games/assets/110921856/ac5b7907-349c-4c76-8e4e-25aeafdd3825)
+[Demo Video.webm](https://github.com/Jayanaka-98/py-game-RPG/assets/110921856/1ac069eb-7a07-462f-82fe-a8c1e3481935)
+
 
 This source code represents a python coded video game which has been coded using "pygame". This game is an RPG type game with attack elements and map gnerations. The code was developed by following a step by step tutorial done by "ShawCode". 
 
