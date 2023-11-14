@@ -74,6 +74,8 @@ class Game:
             self.events()
             self.update()
             self.draw()
+            if len(self.enemies.sprites()) == 0:
+                self.game_won()
 
     def game_over(self):
         text = self.font.render('GaMe OvEr', True, RED)
@@ -128,7 +130,32 @@ class Game:
             self.clock.tick(FPS)
             pygame.display.update()
 
+    def game_won(self):
+            text = self.font.render('YOU WON!', True, BLUE)
+            text_rect = text.get_rect(center = (WIN_WIDTH/2, WIN_HEIGHT/2))
 
+            restart_button = Button(10,WIN_HEIGHT-135, 120, 125, WHITE, BLACK, 'Restart', 32)
+            
+            for sprite in self.all_sprites:
+                sprite.kill()
+            
+            while self.running:
+                for event in pygame.event.get():
+                    if event.type == pygame.QUIT:
+                        self.running = False
+
+                mouse_pos = pygame.mouse.get_pos()
+                mouse_pressed = pygame.mouse.get_pressed()
+
+                if restart_button.is_pressed(mouse_pos, mouse_pressed)   :
+                    self.new()
+                    self.main()
+
+                self.screen.blit(self.intro_background, (0,0))
+                self.screen.blit(text, text_rect)
+                self.screen.blit(restart_button.image, restart_button.rect)    
+                self.clock.tick(FPS)
+                pygame.display.update()  
 
         
 
