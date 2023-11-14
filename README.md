@@ -1,4 +1,4 @@
-# python based RPG game development using pygame
+# Python based RPG game development using pygame
 
 [Demo Video.webm](https://github.com/Jayanaka-98/python-games/assets/110921856/ac5b7907-349c-4c76-8e4e-25aeafdd3825)
 
