@@ -9,13 +9,13 @@ This source code represents a python coded video game which has been coded using
 
 ## Setting Up
 
-Create your own virtual environment which will be compatible with the source code. Clone this repo and open a terminal and bas the following (Assuming you have conda already installed).
+Create your own virtual environment which will be compatible with the source code. Clone this repo and open a terminal and bash the following (Assuming you have conda already installed).
 
 '''
 conda create --name py-games --file requirements.txt
 '''
 
-This will install the necessary packages required for the sorce code.
+This will install the necessary packages required for the source code.
 
 ## Trying the game
 
