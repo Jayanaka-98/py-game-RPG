@@ -17,7 +17,7 @@ tilemap_2 = [
 
 ]
 
-tilemap_3 = [
+tilemap = [
     'BBBBBBBBBBBBBBBBBBBB',
     'B..........E.......B',
     'B..................B',
@@ -35,7 +35,7 @@ tilemap_3 = [
     'BBBBBBBBBBBBBBBBBBBB'
 ]
 
-tilemap = [
+tilemap_4 = [
     'BBBBBBBBBBBBBBBBBBB',
     'B........E........B',
     'B.BBBBBBB.BBBBBBB.B',
