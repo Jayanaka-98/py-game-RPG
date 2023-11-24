@@ -3,3 +3,4 @@
 .jaseci_logs/app.log
 .gitignore
 .gitignore
+.jaseci_logs/core.log
