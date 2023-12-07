@@ -11,6 +11,7 @@ class Game:
         self.clock = pygame.time.Clock()
         self.font = pygame.font.Font('8bitoperator_jve.ttf', 32)
         self.running = True
+        self.won = False
 
         self.character_spritesheet = Spritesheet('img/character.png')
         self.terrain_spritesheet = Spritesheet('img/terrain.png')
@@ -32,6 +33,7 @@ class Game:
 
     def new(self):
         self.playing = True
+        self.won = False
 
         self.all_sprites = pygame.sprite.LayeredUpdates()
         self.blocks = pygame.sprite.LayeredUpdates()
@@ -75,7 +77,11 @@ class Game:
             self.update()
             self.draw()
             if len(self.enemies.sprites()) == 0:
-                self.game_won()
+                self.won = True
+                self.playing = False
+        if self.won == False:
+            self.playing = False
+                
 
     def game_over(self):
         text = self.font.render('GaMe OvEr', True, RED)
@@ -95,8 +101,10 @@ class Game:
             mouse_pressed = pygame.mouse.get_pressed()
 
             if restart_button.is_pressed(mouse_pos, mouse_pressed)   :
+                self.won = False
                 self.new()
-                self.main()
+                # self.main()
+                break
 
             self.screen.blit(self.go_background, (0,0))
             self.screen.blit(text, text_rect)
@@ -149,7 +157,9 @@ class Game:
 
                 if restart_button.is_pressed(mouse_pos, mouse_pressed)   :
                     self.new()
-                    self.main()
+                    # self.main()
+                    break
+                    
 
                 self.screen.blit(self.intro_background, (0,0))
                 self.screen.blit(text, text_rect)
@@ -165,7 +175,12 @@ g.intro_screen()
 g.new()
 while g.running:
     g.main()
-    g.game_over()
+    if g.won == True:
+        print(g.won)
+        g.game_won()
+    else:
+        print(g.won)
+        g.game_over()
 
 pygame.quit()
 sys.exit()
