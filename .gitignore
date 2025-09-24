@@ -1,6 +1,17 @@
+# High score file - personal data
+high_score.json
+
+# Python cache files
 *.pyc
 *.pyo
+__pycache__/
+
+# Jaseci logs
 .jaseci_logs/app.log
-.gitignore
-.gitignore
 .jaseci_logs/core.log
+
+# IDE and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
