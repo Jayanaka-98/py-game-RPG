@@ -21,7 +21,7 @@ if __name__ == "__main__":
     root = Tk()
     root.configure(bg="light green")
     root.title("Simple Calculator")
-    root.geometry("270x150")
+    root.geometry("390x170")
 
     display = StringVar()
     entry = Entry(root, textvariable=display)
